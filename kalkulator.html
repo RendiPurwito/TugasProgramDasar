@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Masukan Angka" id="angkapertama">
+    <input type="text" placeholder="Masukan Angka" id="angkakedua">
+    <button onclick="hitungTambah()" >Tambah</button>
+    <button onclick="hitungKurang()" >Kurang</button>
+    <button onclick="hitungKali()" >Kali</button>
+    <button onclick="hitungBagi()" >Bagi</button>
+    <input type="text" placeholder="hasil" id="hasil">
+    <script>
+       function hitungTambah(){
+        var angka1=document.getElementById('angkapertama').value
+        var angka2=document.getElementById('angkakedua').value
+        var angkabaru1=Number(angka1)
+        var angkabaru2=Number(angka2)
+        var hasil= angkabaru1 + angkabaru2
+        document.getElementById('hasil').value = hasil
+       }
+       function hitungKurang(){
+        var angka1=document.getElementById('angkapertama').value
+        var angka2=document.getElementById('angkakedua').value
+        var angkabaru1=Number(angka1)
+        var angkabaru2=Number(angka2)
+        var hasil= angkabaru1 - angkabaru2
+        document.getElementById('hasil').value = hasil
+       }
+       function hitungKali(){
+        var angka1=document.getElementById('angkapertama').value
+        var angka2=document.getElementById('angkakedua').value
+        var angkabaru1=Number(angka1)
+        var angkabaru2=Number(angka2)
+        var hasil= angkabaru1 * angkabaru2
+        document.getElementById('hasil').value = hasil
+       }
+       function hitungBagi(){
+        var angka1=document.getElementById('angkapertama').value
+        var angka2=document.getElementById('angkakedua').value
+        var angkabaru1=Number(angka1)
+        var angkabaru2=Number(angka2)
+        var hasil= angkabaru1/angkabaru2
+        document.getElementById('hasil').value = hasil
+       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Bangun Datar</title>
+</head>
+<body>
+    
+    <script>
+        function bangun_datar(pilihan){
+        
+        if (pilihan == "persegi"){
+            var sisi=prompt("Masukkan Nilai Sisi");
+            var sisi=prompt("Masukkan Nilai Sisi");
+            var luas=sisi*sisi;
+            alert(luas)
+            console.log("luas :"+luas)
+            document.write('Persegi'+'</br>')
+            document.write("Luas :"+luas)
+        }
+        else if (pilihan == "jajar genjang"){
+            var alas=prompt("Masukan Nilai Alas");
+            var tinggi=prompt("Masukan Nilai Tinggi");
+            var luas=alas*tinggi
+            alert(luas)
+            console.log("luas :"+luas)
+            document.write('Jajar Genjang'+'</br>')
+            document.write("Luas :"+luas)
+        }
+        else if (pilihan == "persegi panjang"){
+            var panjang=prompt("Masukan Nilai Panjang")
+            var lebar=prompt("Masukan Nilai lebar")
+            var luas=panjang*lebar
+            alert(luas)
+            console.log("luas :"+luas)
+            document.write('Persegi Panjang'+'</br>')
+            document.write("Luas :"+luas)
+        }
+        else if(pilihan == "lingkaran"){
+           var r=prompt("Masukan Nilai Jari Jari")
+           r %7==0
+           luas=22/7*r*r
+           alert(luas)
+           console.log("luas :"+luas)
+           document.write('Lingkaran'+'</br>')
+           document.write("Luas :"+luas)
+           if(r %7==1){
+               luas=3.14*r*r
+               alert=(luas)
+               console.log("luas :"+ luas)
+               document.write('Lingkaran'+'</br>')
+               document.write("Luas :"+luas)
+           }
+        }
+        else{
+            alert("bangun datar tidak tersedia")
+        }
+    }
+    function BangunDatar() {
+            var bd;
+            bd = prompt("Mau Menghitung Luas Bangun Datar Apa?(Persegi, Persegi Panjang, Jajar Genjang, Lingkaran)");
+            bangun_datar(bd)
+        }
+        BangunDatar();
+       
+       
+    </script>
+</body>
+</html>
