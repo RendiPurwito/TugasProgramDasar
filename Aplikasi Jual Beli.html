@@ -60,7 +60,47 @@
                     </tbody>
                 </table>
 
-                <button type="button" class="btn btn-primary mt-3 btn-block">Bayar</button>
+                <button type="button" class="btn btn-primary mt-3 btn-block" data-toggle="modal" data-target="#staticBackdrop" >Bayar</button>
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Metode Pembayaran</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body"> <label for="namasiswa">Nama Pembeli</label>
+                            <input type="teks" class="form-control" id="id_namasiswa"
+                                placeholder="Masukkan Nama Anda">
+
+                            <label for="kelas">Metode Pembayaran</label><br>
+                            <input type="radio" name="metode" value="BCA">BCA<br>
+                            <input type="radio" name="metode" value="BNI">BNI<br>
+                            <input type="radio" name="metode" value="MANDIRI">MANDIRI<br>
+                            <input type="radio" name="metode" value="OVO">OVO<br>
+                            <input type="radio" name="metode" value="LinkAja">LinkAja<br>
+                            <input type="radio" name="metode" value="DANA">DANA<br>
+                            <input type="radio" name="metode" value="Alfamart/Alfamidi">Alfamart/Alfamidi<br>
+                            <input type="radio" name="metode" value="COD">Cash On Delivery<br>
+
+                            <label for="alamat">Alamat</label>
+                            <textarea class="form-control" id="id_alamat" placeholder="Masukkan Alamat Anda"
+                                rows="3"></textarea>
+
+                            <label for="namasiswa">No Hp</label>
+                            <input type="number" class="form-control" id="id_nohp"
+                                placeholder="Masukkan No Hp Anda">
+                          
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="pembayaran(' + i + ')">Selesaikan Pembayaran</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
             </div>
 
@@ -68,9 +108,21 @@
                 
 
             </div>
+
+            <div id="hasilpembelian">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
         </div>
     </div>
 
+    
     <script>
         var namabarang = ['FN FAL', 'Heckler & Koch HK416', 'ZH-05', 'M4A1']
         var hargabarang = [7000000, 6000000, 8000000, 5000000]
@@ -163,6 +215,8 @@
 
             showlistkeranjang()
         }
+       
+       
 
         
     </script>
